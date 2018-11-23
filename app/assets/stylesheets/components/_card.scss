@@ -4,12 +4,8 @@
   justify-content: flex-start;
   margin-bottom: 100vh;
 }
-.card:hover {
-  opacity: 0.7;
-}
 
 .card {
-  padding: 15px;
   border: 1px solid rgb(230, 230, 230);
   width: 300px;
   height: 214px;
@@ -17,19 +13,40 @@
   margin-bottom: 10px;
   border-radius: 1px;
   box-shadow: 0 0 10px black;
-  background-size: cover;
   margin: 15px;
+  display: grid;
+  grid-template-rows: 85% 15%;
+}
+
+.card-photo {
+  grid-row: 1 / span 1;
+  background-size: cover;
 }
 
 .card-description {
-  position: relative;
-  bottom: -85px;
+  grid-row: 2 / span 1;
   color: white;
-  text-decoration: none;
+  padding-left: 20px;
+  padding-top: 3px;
+  display: grid;
+  grid-template-columns: 78% 10% 12%;
 }
 
-.card-link:hover {
-  opacity: 0.1;
-  text-decoration: none;
+.card-name {
+  grid-column: 1 / span 1;
+  color: black;
 }
 
+.card-icon {
+  grid-column: 2 / span 1;
+  color: grey;
+}
+
+.card-pop {
+  grid-column: 3 / span 1;
+  color: black;
+}
+
+.card:hover {
+  opacity: 0.7;
+}

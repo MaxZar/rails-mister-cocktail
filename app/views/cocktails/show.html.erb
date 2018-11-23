@@ -1,6 +1,9 @@
-<h1><%= @cocktail.name %></h1>
+<h1><%= @cocktail.name %> <%= link_to '<i class="fas fa-thumbs-up thumb"></i>'.html_safe, like_cocktail_path(@cocktail) %> <span class="thumb"><%= @cocktail.popularity %></h1></span>
+
 <p><%= link_to 'back', cocktails_path %></p>
 <br>
+
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 
 <span>
   <h3>Doses to include in <%= @cocktail.name %>
